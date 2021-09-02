@@ -7,6 +7,6 @@
 
 ###### 4.nome,  salário  atual  e  novo  salário  dos jogadores  com  novo  salário  acima  da  média  de  novos salários.
 ###### 5.dados de todos os clubes:
-    ###### 5.1.nome do clube e cidade-sede;
-    ###### 5.2.média salarial; e 
-    ###### 5.3.quantidade de jogadores.
+     5.1.nome do clube e cidade-sede;
+     5.2.média salarial; e 
+     5.3.quantidade de jogadores.
