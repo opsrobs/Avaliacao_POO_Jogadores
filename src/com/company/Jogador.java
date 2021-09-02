@@ -12,6 +12,19 @@ public class Jogador {
         this.condicaoJogador = condicaoJogador;
         this.clube = clube;
     }
+    public Jogador() {
+        this.nome = nome;
+        this.salario = salario;
+        this.condicaoJogador = condicaoJogador;
+        this.clube = clube;
+    }
+
+    public String infoJogador(){
+        return "\n"+this.getNome()+
+                "\n"+this.getSalario()+
+                "\n" + this.getCondicaoJogador() +
+                "\n" + this.getClube();
+    }
 
     public String getNome() {
         return nome;

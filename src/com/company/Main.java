@@ -7,14 +7,30 @@ import static com.company.ServicoClube.*;
 public class Main {
 
     public static void main(String[] args) {
-        ServicoClube servicoClube =new ServicoClube();
-        String nome= JOptionPane.showInputDialog("Informe o nome do time");
-        String cidade=JOptionPane.showInputDialog("Informe o nome da cidade: ");
+        Clube clube;
+        ServicoClube sC =new ServicoClube();
+        ServicoJogador sJ= new ServicoJogador();
+        String nomeJogador;
+        String situacao;
+        String nome;
+        String cidade;
+        float salario=0;
 
-        while (nome != "sair"){
-            servicoClube.gravarClube(nome,cidade);
-
+        nome=sC.capNomeClube();
+        while (!nome.equalsIgnoreCase("sair")){
+            cidade=sC.capNomeCidade();
+            clube= new Clube(nome,cidade);
+            sC.gravarClube(nome,cidade);
+            nomeJogador = sJ.capNomeJogador();
+            while (!nomeJogador.equalsIgnoreCase("sair")) {
+                salario = sJ.capSalarioJogador(nomeJogador);
+                situacao = sJ.capSituacaoJogador();
+                clube.gravarDadosJogador(nomeJogador, salario, situacao, clube);
+                nomeJogador = sJ.capNomeJogador();
+            }
+            nome=sC.capNovoClube();
         }
+        System.out.println(sC.retornarClubes());
 
     }
 }
